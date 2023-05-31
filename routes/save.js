@@ -27,3 +27,5 @@ router.get('./data/:id', (req, res) => {
         }
     )
 })
+
+module.exports = router

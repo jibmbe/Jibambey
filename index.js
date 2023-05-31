@@ -11,6 +11,7 @@ const authRoute = require("./routes/auth")
 const reactionsRoute = require("./routes/reactions")
 const notificationsRoute = require("./routes/notifications")
 const commentsRoute = require("./routes/comments")
+const saveRoute = require("./routes/save")
 const cors = require('cors');
 const fs = require("fs")
 const bodyParser = require("body-parser");
@@ -31,9 +32,10 @@ connectDB();
    app.use("/api/users", userRoute);
    app.use("/api/auth", authRoute);
    app.use("/api/reactions", reactionsRoute);
-   app.use("api/notifications", notificationsRoute);
-   app.use("api/comments", commentsRoute)
-   app.use("data", async(req, res) =>{
+   app.use("/api/notifications", notificationsRoute);
+   app.use("/api/comments", commentsRoute)
+   app.use("/api/save", saveRoute)
+   app.use("/data", async(req, res) =>{
     res.send(dataObj)
    })
 
