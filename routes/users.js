@@ -51,7 +51,7 @@ router.get("/:id", async (req, res)=>{
 //follow a user
 
 router.put("/:id/follow", async (req, res)=>{
-    if(req.params.userId !== req.params.id){  // checks if user are the same
+    if(req.params.userId !== req.params.id){  // checks if users are the same
          try{
              const user = await User.findById(req.params.id);
              const currentUser = await User.findById(req.body.userId)
