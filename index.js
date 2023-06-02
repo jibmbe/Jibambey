@@ -17,7 +17,7 @@ const fs = require("fs")
 const bodyParser = require("body-parser");
 
 //parsing a file to front end using asynchronous version (using fs module)
-const data = JSON.parse(fs.readFileSync("./data.json", "utf-8"))
+const data = JSON.parse(fs.readFileSync("./data.json", "utf-8", "title", "categoryName", "reviewsCount", "imageUrls"))
 //console.log(data)
 
 
